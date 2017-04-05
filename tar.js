@@ -1,7 +1,7 @@
 /**
  * Tar.js - Tarfile support for the browser.
  * @author Enki
- * @desc Loads a tarfile as an arraybuffer and create's object URL's for each of the files within.
+ * @desc Loads a tarfile as an arraybuffer and creates object URL's for each of the files within.
  */
 (function (name, context, definition) {
   if (typeof module != 'undefined' && module.exports) module.exports = definition();
