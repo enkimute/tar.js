@@ -1,4 +1,13 @@
-var Tar = (function() {
+/**
+ * Tar.js - Tarfile support for the browser.
+ * @author Enki
+ * @desc Loads a tarfile as an arraybuffer and create's object URL's for each of the files within.
+ */
+(function (name, context, definition) {
+  if (typeof module != 'undefined' && module.exports) module.exports = definition();
+  else if (typeof define == 'function' && define.amd) define(name, definition);
+  else context[name] = definition();
+}('Tar', this, function () {
   var tarfiles = [];
   return function(filename,complete) {
     if (tarfiles[filename]) return complete&&complete(tarfiles[filename]),tarfiles[filename];
@@ -18,4 +27,4 @@ var Tar = (function() {
     };
     req.send(null);
   }; 
-})();
+}));
